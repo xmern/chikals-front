@@ -40,7 +40,7 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "externalDependencies": [ "Assets/close-up-heat-pump-outside-home.jpg"  ]
+            "externalDependencies": [ "/chikals-front/Assets/close-up-heat-pump-outside-home.jpg"  ]
           },
           "configurations": {
             "production": {
