@@ -39,7 +39,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "externalDependencies": [ "Assets/close-up-heat-pump-outside-home.jpg"  ]
           },
           "configurations": {
             "production": {
@@ -99,6 +100,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
