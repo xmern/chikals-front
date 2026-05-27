@@ -1,0 +1,170 @@
+<div class="container">
+  <nav class="navbar">
+    <div class="logo" routerLink="/home">
+      <img src="Assets/ccs1.png" alt="Logo" class="logo-image" />
+      <h2 class="logo-text">CHIKALS</h2>
+    </div>
+
+    <div class="nav-links">
+      <a href="#services" routerLinkActive="active">Services</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact</a>
+    </div>
+
+    <button
+      class="hamburger"
+      [class.open]="menuOpen"
+      (click)="toggleMenu()"
+      aria-label="Toggle menu"
+      [attr.aria-expanded]="menuOpen"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" [class.open]="menuOpen" (click)="closeMenu()">
+    <a href="#services" routerLinkActive="active">Services</a>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+  </div>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+
+    <div class="billboard">
+      <div class="billboard-overlay"></div>
+
+      <div class="billboard-content">
+        <div class="billboard-left">
+          <div class="billboard-log-line">
+            <h2>
+              <span style="color: hsl(var(--accent-gold-500))">C</span>hikals
+              <span style="color: hsl(var(--accent-gold-500))">C</span>ooling
+              <span style="color: hsl(var(--accent-gold-500))">S</span>ystems
+            </h2>
+            <p style="color: hsl(var(--accent-sky-300))">
+              Enjoy the comfort of clean cool air all year round, with our
+              professional HVAC services!
+            </p>
+          </div>
+        </div>
+
+        <div class="billboard-right">
+          <div class="billboard-portrait">
+            <img src="Assets/img1.jpeg" alt="Chikals technician" />
+          </div>
+          <button class="contact-btn" (click)="openModal()">Contact Us</button>
+        </div>
+      </div>
+    </div>
+
+    <section id="services" class="services">
+      <h2>Our Services</h2>
+      <p class="services-sub">Professional HVAC solutions for every need</p>
+      <div class="service-list">
+        <div class="service-card">
+          <div class="service-card-img">
+            <img src="Assets/img1.jpeg" alt="Air conditioning installation" />
+          </div>
+          <div class="service-card-body">
+            <h3>Air Conditioning Installation</h3>
+            <p>
+              Expert installation of AC systems to keep your home cool and
+              comfortable through every season.
+            </p>
+            <span class="service-tag">Installation</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-img">
+            <img src="Assets/img2.jpeg" alt="Heating system repair" />
+          </div>
+          <div class="service-card-body">
+            <h3>Heating System Repair</h3>
+            <p>
+              Skilled repair of heating systems to ensure your home stays warm
+              and cozy during the cold season.
+            </p>
+            <span class="service-tag">Repair</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-img">
+            <img src="Assets/img3.jpeg" alt="HVAC maintenance" />
+          </div>
+          <div class="service-card-body">
+            <h3>HVAC Maintenance</h3>
+            <p>
+              Regular servicing for peak efficiency and longevity of your HVAC
+              system, keeping it running smoothly year-round.
+            </p>
+            <span class="service-tag">Maintenance</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img
+            src="Assets/ccs3.png"
+            alt="Chikals Cooling Systems"
+            style="width: 64px; height: auto"
+          />CHIKALS
+        </div>
+        <div class="footer-contacts">
+          <a href="tel:+2348022799368" class="footer-contact-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              />
+            </svg>
+            +234 802 279 9368
+          </a>
+          <a href="mailto:inboxchikals@gmail.com" class="footer-contact-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            inboxchikals&#64;gmail.com
+          </a>
+        </div>
+        <p class="footer-copy">© 2025 Chikals Cooling Systems</p>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<!-- Contact modal — rendered outside .container so it overlays everything -->
+@if (modalOpen) {
+  <app-contact-modal (closeModal)="closeModal()"></app-contact-modal>
+}
